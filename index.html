@@ -37,7 +37,26 @@
             src="./images/icon-hamburger.svg"
             alt="Hamburger Icon"
             class="navbar__hamburger-icon"
+            id="hamburger"
           />
+          <img
+            src="./images/icon-close-menu.svg"
+            alt="Close Menu Icon"
+            class="navbar__hamburger-icon hidden"
+            id="close-icon"
+          />
+          <div class="backdrop hidden"></div>
+          <ul class="navbar__mobile-menu hidden">
+            <li class="navbar__mobile-menu__item">
+              <a href="#" class="navbar__mobile-menu__link">About</a>
+            </li>
+            <li class="navbar__mobile-menu__item">
+              <a href="#" class="navbar__mobile-menu__link">Discover</a>
+            </li>
+            <li class="navbar__mobile-menu__item">
+              <a href="#" class="navbar__mobile-menu__link">Get Started</a>
+            </li>
+          </ul>
           <ul class="navbar__list-desktop">
             <li class="navbar__list-desktop-element">About</li>
             <li class="navbar__list-desktop-element">Discover</li>
@@ -233,5 +252,7 @@
         </div>
       </div>
     </main>
+
+    <script src="./index.js"></script>
   </body>
 </html>
