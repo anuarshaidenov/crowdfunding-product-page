@@ -1,0 +1,221 @@
+@import "colors";
+.container {
+  margin: 0 auto;
+  width: 90%;
+
+  &--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--small {
+    max-width: 320.5px;
+  }
+
+  &--moved-up {
+    transform: translateY(-2%);
+  }
+}
+
+.section-header {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 25%,
+      rgba(0, 0, 0, 0) 70%
+    ),
+    url("../images/image-hero-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 2rem 0 15rem;
+  .navbar {
+    &__logo {
+    }
+
+    &__hamburger-icon {
+      display: block;
+      width: 16px;
+    }
+
+    &__list-desktop {
+      display: none;
+    }
+  }
+}
+
+.section {
+  padding: 2.5rem 1rem 2rem;
+  border: 1px rgba($color-dark-gray, 0.2) solid;
+  border-radius: 8px;
+  background-color: white;
+
+  &--mb {
+    margin-bottom: 2rem;
+  }
+
+  &--header {
+    position: relative;
+    text-align: center;
+
+    &__heading {
+      margin: 0 0 1.5rem;
+      padding: 0 1rem;
+    }
+
+    &__subheading {
+      margin: 0 0 1.5rem;
+    }
+
+    &__logo {
+      display: block;
+      position: absolute;
+      width: 50px;
+      top: -25px;
+      left: 40%;
+    }
+    &__btn-cta {
+      margin-right: 0.8rem;
+    }
+  }
+
+  &--stats {
+    text-align: center;
+    &__numbers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__number {
+      padding: 1rem 0;
+      position: relative;
+
+      &--border-top-bottom {
+        border-top: 1px rgba($color-dark-gray, 0.2) solid;
+        border-bottom: 1px rgba($color-dark-gray, 0.2) solid;
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    &__loading-bar {
+      margin-top: 1rem;
+      width: 100%;
+      height: 15px;
+      background-color: rgba($color-dark-gray, 0.2);
+    }
+
+    &__inner-bar {
+      width: 80%;
+      height: 100%;
+      background-color: $color-moderate-cyan;
+    }
+  }
+
+  &--inner {
+    padding: 2rem;
+    &__row {
+      flex-direction: column;
+      align-items: flex-start;
+
+      &:first-of-type {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 0.5rem;
+    }
+
+    &__subheading {
+      margin-bottom: 1.5rem;
+    }
+
+    &__heading-number {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &--about {
+    &__heading {
+      margin-bottom: 2rem;
+    }
+
+    &__subheading {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &--inactive {
+    opacity: 0.5;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.loading-bar {
+  display: block;
+  border-radius: 30px;
+}
+
+.heading-primary {
+  font-size: 1.2rem;
+
+  &--number {
+    font-size: 2rem;
+  }
+
+  &--small {
+    font-size: 0.9rem;
+  }
+
+  &--flex-center {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+}
+
+.subheading {
+  color: $color-dark-gray;
+  font-size: 0.9rem;
+
+  &--green {
+    color: $color-moderate-cyan;
+  }
+}
+
+.btn-cta {
+  padding: 1.2em 2.5em;
+  border-radius: 30px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  font-size: 0.9rem;
+  display: inline-block;
+
+  &--primary {
+    background: $color-moderate-cyan;
+    color: white;
+  }
+
+  &--inactive {
+    background: hsl(0, 1%, 54%);
+    color: white;
+  }
+}
+
+.btn-bookmark {
+  &--desktop {
+    display: none;
+  }
+
+  &--mobile {
+    display: block;
+  }
+}
