@@ -10,12 +10,38 @@
   }
 
   &--small {
-    max-width: 320.5px;
+    max-width: 500px;
   }
 
   &--moved-up {
     transform: translateY(-2%);
   }
+
+  &--modal {
+    position: absolute;
+    z-index: 98;
+    left: 5%;
+    top: 25%;
+  }
+}
+
+.form-pledge {
+  text-align: center;
+
+  &__subheading {
+    margin: 1rem 0;
+  }
+}
+
+.backdrop-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  z-index: 97;
 }
 
 .section-header {
@@ -66,7 +92,6 @@
       width: 90%;
       border-radius: 5px;
       z-index: 100;
-      transform: translateY(0);
       transition: transform 0.4s;
 
       &__item {
@@ -78,11 +103,43 @@
   }
 }
 
+.input-pledge {
+  padding: 1em;
+  border-radius: 30px;
+  border: 1px rgba($color-dark-gray, 0.2) solid;
+  font-family: inherit;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+
+  &--m-r {
+    margin-right: 1rem;
+  }
+}
+
 .section {
   padding: 2.5rem 1rem 2rem;
   border: 1px rgba($color-dark-gray, 0.2) solid;
   border-radius: 8px;
   background-color: white;
+
+  &--modal {
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__pledge {
+    border-top: 1px rgba($color-dark-gray, 0.2) solid;
+    margin-top: 1.5rem;
+  }
+
+  &--active {
+    border: 2px $color-moderate-cyan solid;
+  }
 
   &--mb {
     margin-bottom: 2rem;
@@ -189,7 +246,14 @@
 
   &__row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+
+    &--modal {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 0.8rem;
+      align-items: center;
+    }
   }
 }
 
@@ -212,7 +276,7 @@
   &--flex-center {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.5rem;
   }
 }
 
@@ -222,6 +286,10 @@
 
   &--green {
     color: $color-moderate-cyan;
+  }
+
+  &--left {
+    font-weight: 400;
   }
 }
 
@@ -233,6 +301,7 @@
   border: none;
   font-size: 0.9rem;
   display: inline-block;
+  width: 100%;
 
   &--primary {
     background: $color-moderate-cyan;
@@ -252,5 +321,18 @@
 
   &--mobile {
     display: block;
+  }
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border: 5px solid white;
+  outline: 1px solid rgba($color-dark-gray, 0.2);
+  border-radius: 50%;
+  padding: 5px;
+
+  &--active {
+    background-color: $color-moderate-cyan;
   }
 }
