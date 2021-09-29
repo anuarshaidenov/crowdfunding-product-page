@@ -123,6 +123,14 @@
   border-radius: 8px;
   background-color: white;
 
+  &--modal-submitted {
+    text-align: center;
+    &__check {
+      width: 50px;
+      margin: 0 auto;
+    }
+  }
+
   &--modal {
     &__row {
       display: flex;
@@ -143,6 +151,10 @@
 
   &--mb {
     margin-bottom: 2rem;
+  }
+
+  &--mb1p5 {
+    margin-bottom: 1.5rem;
   }
 
   &--header {
@@ -246,7 +258,7 @@
 
   &__row {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     &--modal {
       flex-direction: row;
@@ -301,7 +313,7 @@
   border: none;
   font-size: 0.9rem;
   display: inline-block;
-  width: 100%;
+  //   width: 100%;
 
   &--primary {
     background: $color-moderate-cyan;

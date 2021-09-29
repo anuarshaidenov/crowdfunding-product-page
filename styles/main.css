@@ -168,6 +168,15 @@ a {
   background-color: white;
 }
 
+.section--modal-submitted {
+  text-align: center;
+}
+
+.section--modal-submitted__check {
+  width: 50px;
+  margin: 0 auto;
+}
+
 .section--modal__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,6 +201,10 @@ a {
 
 .section--mb {
   margin-bottom: 2rem;
+}
+
+.section--mb1p5 {
+  margin-bottom: 1.5rem;
 }
 
 .section--header {
@@ -310,9 +323,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section__row--modal {
@@ -377,7 +390,6 @@ a {
   border: none;
   font-size: 0.9rem;
   display: inline-block;
-  width: 100%;
 }
 
 .btn-cta--primary {

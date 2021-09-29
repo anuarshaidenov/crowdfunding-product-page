@@ -6,8 +6,13 @@ const btnModalClose = document.getElementById("modal-close");
 
 const selectModals = document.querySelectorAll(".modal-select");
 
+const form = document.querySelectorAll(".form-pledge");
+const modalSuccess = document.getElementById("modal-success");
+const sectionModal = document.querySelector(".section--modal");
+const btnModalSuccess = document.getElementById("btn-modal-success");
+
 btnModalOpen.addEventListener("click", function () {
-  [backdropModal, modalContainer].forEach((el) =>
+  [backdropModal, modalContainer, sectionModal].forEach((el) =>
     el.classList.remove("hidden")
   );
 });
@@ -40,3 +45,16 @@ selectModals.forEach((section) =>
     sectionPledge.classList.remove("hidden");
   })
 );
+
+form.forEach((el) =>
+  el.addEventListener("submit", function (e) {
+    e.preventDefault();
+    sectionModal.classList.add("hidden");
+    modalSuccess.classList.remove("hidden");
+  })
+);
+
+btnModalSuccess.addEventListener("click", function () {
+  backdropModal.classList.add("hidden");
+  modalSuccess.classList.add("hidden");
+});
