@@ -67,13 +67,13 @@
     </header>
 
     <div class="backdrop-modal hidden"></div>
-    <div class="container container--modal hidden">
+    <div class="container container--modal hidden" id="modal-container">
       <div class="section section--modal">
         <div class="section--modal__row">
           <h2 class="heading--primary section--modal__heading">
             Back this project
           </h2>
-          <div class="section--modal__close">
+          <div class="section--modal__close" id="modal-close">
             <img
               src="./images/icon-close-modal.svg"
               alt=""
@@ -267,6 +267,7 @@
           <div class="section__row">
             <a
               href="#"
+              id="btn-modal-open"
               class="btn-cta btn-cta--primary section--header__btn-cta"
               >Back this project</a
             >
@@ -437,6 +438,7 @@
       </div>
     </main>
 
-    <script src="./index.js"></script>
+    <script src="./js/mobileMenu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
